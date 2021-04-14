@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row border-bottom">
+    <div class="col-md-9 col-6"><h4>All Tags <small>[<%= Tag.count %>]</small></h4></div>
+    <div class="col-md-3 col-6 text-right">
+      <%= link_to "new tag", new_tag_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-12'>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @tags.each_with_index do |tag, sno| %>
+              <tr>
+                <td><%= link_to tag.name, tag_path(tag) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

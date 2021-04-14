@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row border-bottom">
+    <div class="col-md-9 col-6"><h4>Products List <small>[<%= Product.count %>]</small></h4></div>
+    <div class="col-md-3 col-6 text-right">
+      <%= link_to "new product", new_product_path %>
+      <%= link_to "all categories", categories_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-12'>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Tag</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @products.each_with_index do |product, sno| %>
+              <tr>
+                <td><%= link_to product.name, product_path(product) %></td>
+                <td><%= product.price %></td>
+                <td><% product.tags.each do |tag| %>
+                      <%= tag.name.titleize %>
+                      <% end %>
+                </td>
+                <td><%= product.category.name %></td>
+                <td>
+                  <%= link_to "edit product", edit_product_path(product) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

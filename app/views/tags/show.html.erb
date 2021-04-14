@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row border-bottom mb-4">
+    <div class="col-md-3 col-6">
+      <h4>
+        Tag Detail
+        <small>
+          <%= link_to("edit", edit_tag_path(@tag), class: "text-danger ml-1") %>
+        </small>
+      </h4>
+    </div>
+    <div class="col-md-2 col-6 offset-md-7 text-right"><%= link_to 'All tags', tags_path %></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="table-responsive">
+        <table class="table table-hover border table-header-150">
+          <tr>
+            <th>Name</th>
+            <td><%= @tag.name %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

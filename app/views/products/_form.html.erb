@@ -1,0 +1,16 @@
+<div class="row">
+  <div class='col-md-6 col-12 offset-md-3'>
+    <%= simple_form_for product do |f| %>
+      <%= f.input :name %>
+      <%= f.input :price %> 
+      <label>Tags</label><br>
+      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |m| %>
+	    <%= m.check_box %> <%= m.label %>
+	  <% end %> 
+	  <br>    
+      <%= f.label :category_id %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {include_blank: true}, {class: "form-control"} %>     
+      <%= f.submit  %>
+    <% end %>
+  </div>
+</div>
