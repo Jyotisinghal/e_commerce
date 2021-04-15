@@ -83,6 +83,13 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     execjs (2.7.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
+      railties (>= 5.0.0)
+    faker (2.17.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -223,6 +230,8 @@ DEPENDENCIES
   bootstrap (~> 5.0.0.beta2)
   byebug
   capybara (>= 2.15)
+  factory_bot_rails
+  faker
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
