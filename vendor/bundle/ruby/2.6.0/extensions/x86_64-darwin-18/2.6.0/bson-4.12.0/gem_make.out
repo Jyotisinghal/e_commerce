@@ -1,0 +1,132 @@
+current directory: /Users/punchh_admin/Desktop/e_commerce/vendor/bundle/ruby/2.6.0/gems/bson-4.12.0/ext/bson
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/punchh_admin/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210415-73831-y52cox.rb extconf.rb
+creating Makefile
+
+current directory: /Users/punchh_admin/Desktop/e_commerce/vendor/bundle/ruby/2.6.0/gems/bson-4.12.0/ext/bson
+make "DESTDIR=" clean
+
+current directory: /Users/punchh_admin/Desktop/e_commerce/vendor/bundle/ruby/2.6.0/gems/bson-4.12.0/ext/bson
+make "DESTDIR="
+compiling bytebuf.c
+compiling endian.c
+compiling init.c
+compiling libbson-utf8.c
+compiling read.c
+read.c:33:49: warning: function 'pvt_raise_decode_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void pvt_raise_decode_error(volatile VALUE msg) {
+                                                ^
+read.c:121:27: warning: implicit conversion loses integer precision: 'long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+  const uint32_t length = FIX2LONG(i);
+                 ~~~~~~   ^~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:393:21: note: expanded from macro 'FIX2LONG'
+#define FIX2LONG(x) RB_FIX2LONG(x)
+                    ^~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:377:25: note: expanded from macro 'RB_FIX2LONG'
+#define RB_FIX2LONG(x) ((long)RSHIFT((SIGNED_VALUE)(x),1))
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+read.c:142:5: warning: variable 'result' is used uninitialized whenever switch default is taken [-Wsometimes-uninitialized]
+    default:
+    ^~~~~~~
+read.c:146:10: note: uninitialized use occurs here
+  return result;
+         ^~~~~~
+read.c:131:15: note: initialize the variable 'result' to silence this warning
+  VALUE result;
+              ^
+               = 0
+3 warnings generated.
+compiling util.c
+compiling write.c
+write.c:225:14: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+    length = RSTRING_LEN(utf8_string);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:225:14: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+    length = RSTRING_LEN(utf8_string);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:248:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(utf8_string);
+         ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:248:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(utf8_string);
+         ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:292:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(string);
+         ~ ^~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:292:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(string);
+         ~ ^~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:321:26: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  const int32_t length = RSTRING_LEN(symbol_str);
+                ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:321:26: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  const int32_t length = RSTRING_LEN(symbol_str);
+                ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:340:29: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_put_cstring(b, c_str, length, "Key");
+  ~~~~~~~~~~~~~~~           ^~~~~~
+write.c:370:24: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, _position, NUM2LONG(newval));
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~~
+write.c:370:35: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, _position, NUM2LONG(newval));
+  ~~~~~~~~~~~~~~~~~               ^~~~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:678:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) RB_NUM2LONG(x)
+                    ^~~~~~~~~~~~~~
+/Users/punchh_admin/.rvm/rubies/ruby-2.6.3/include/ruby-2.6.0/ruby/ruby.h:677:24: note: expanded from macro 'RB_NUM2LONG'
+#define RB_NUM2LONG(x) rb_num2long_inline(x)
+                       ^~~~~~~~~~~~~~~~~~~~~
+write.c:531:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  new_length = new_position - position;
+             ~ ~~~~~~~~~~~~~^~~~~~~~~~
+write.c:532:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, position, new_length);
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~
+write.c:676:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  new_length = new_position - position;
+             ~ ~~~~~~~~~~~~~^~~~~~~~~~
+write.c:677:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, position, new_length);
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~
+15 warnings generated.
+linking shared-object bson_native.bundle
+
+current directory: /Users/punchh_admin/Desktop/e_commerce/vendor/bundle/ruby/2.6.0/gems/bson-4.12.0/ext/bson
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bson_native.bundle ./.gem.20210415-73831-1wuy3q4
